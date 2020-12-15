@@ -1,0 +1,187 @@
+@import "../../app.component.scss";
+.Title {
+    color: $black;
+    font-size: 2.5em;
+    .under-line {
+        font-weight: 800;
+        color: $black;
+        background-image: linear-gradient( transparent calc(75% - 5px), lighten($spanish-grey, 5%) 5px, );
+        background-size: 0;
+        background-repeat: no-repeat;
+        display: inline;
+        transition: 0.5s ease;
+    }
+    &:hover {
+        .under-line {
+            background-size: 100%;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .Title {
+        font-size: 2.4em;
+        .under-line {
+            font-weight: 800;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .Title {
+        font-size: 1.8em;
+        .under-line {
+            font-weight: 800;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .Title {
+        font-size: 1.4em;
+        .under-line {
+            font-weight: 800;
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    .Title {
+        font-size: 1.4em;
+        .under-line {
+            font-weight: 800;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .Title {
+        font-size: 1.4em;
+        .under-line {
+            font-weight: 800;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .Title {
+        font-size: 1.4em;
+        .under-line {
+            font-weight: 800;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .Title {
+        font-size: 1.4em;
+        .under-line {
+            font-weight: 800;
+        }
+    }
+}
+
+@media (max-width: 280px) {
+    .Title {
+        font-size: 1.4em;
+        .under-line {
+            font-weight: 800;
+        }
+    }
+}
+
+.container {
+    background-color: $white;
+    padding: 5%;
+    margin-bottom: 5%;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+label {
+    border-left: 3px solid $ecru;
+    padding-left: 5px;
+    font-weight: 600;
+    color: $black;
+}
+
+.form-control:focus {
+    border-color: $ecru;
+    box-shadow: 0 0 0 0.2rem rgba($ecru, 0.25);
+}
+
+input,
+select,
+textarea {
+    border-color: $ecru;
+}
+
+.btn {
+    background-color: $ecru;
+    color: $white;
+    font-weight: 500;
+    border-width: 2px;
+    border-color: $ecru;
+    &:hover {
+        background-color: transparent;
+        color: $ecru;
+        border-width: 2px;
+        border-color: $ecru;
+        font-weight: 500;
+    }
+}
+
+p {
+    font-weight: 600;
+    font-size: 30px;
+    color: $black;
+    padding-bottom: 7%;
+}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 540px) {
+    .container {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    p {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 414px) {
+    .container {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    p {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    p {
+        font-size: 26px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 280px) {
+    .container {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    p {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+}

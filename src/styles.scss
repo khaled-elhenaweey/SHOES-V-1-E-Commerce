@@ -1,0 +1,66 @@
+/* Importing Bootstrap SCSS file. */
+
+@import './app/app.component.scss';
+@import '~bootstrap/scss/bootstrap';
+// fonts imports
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import '~animate.css/animate.min';
+// icon material
+@font-face {
+    font-family: 'Pretty';
+    src: url('./assets/fonts/Pretty\ Queen.ttf') format('truetype');
+}
+
+html,
+body {
+    height: 100%;
+    background-color: $powder-blue;
+    background-repeat: repeat repeat-x repeat-y;
+}
+
+body {
+    margin: 0;
+    font-family: Montserrat;
+    font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* Scroll Style */
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 12px;
+    // height: 20px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: $white;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: $spanish-grey;
+    // border-radius: 3px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: $ocean-green;
+}
+
+::-webkit-scrollbar-corner {
+    background: $white;
+}
+
+::-webkit-scrollbar-button {
+    background: $white;
+}

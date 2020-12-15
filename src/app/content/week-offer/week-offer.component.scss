@@ -1,0 +1,423 @@
+@import "../../app.component.scss";
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: table;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat;
+    width: 100%;
+    height: 35vh;
+}
+
+.outer {
+    position: relative;
+    background-image: url('../../../assets/tic-tac-toe.png');
+    background-repeat: repeat repeat-x repeat-y;
+    background-size: cover;
+    border-top: 5px solid $ocean-green;
+    border-bottom: 5px solid $ecru;
+    height: 480px;
+    width: 100%;
+    overflow: hidden;
+    display: table-cell;
+    align-items: center;
+}
+
+img {
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    top: 0px;
+    right: 150px;
+    margin-top: 5%;
+    z-index: 0;
+    --animation-duration: 5s;
+}
+
+.content {
+    position: absolute;
+    margin-top: 6%;
+    left: 140px;
+    z-index: 3
+}
+
+h1 {
+    color: $black;
+    font-size: 64px;
+    --animation-duration: 5s;
+}
+
+p {
+    width: 60%;
+    font-size: 18px;
+    line-height: 1.4;
+    color: $black;
+    margin: 35px 0;
+    --animation-duration: 5s;
+}
+
+.bg {
+    display: inline-block;
+    color: $ecru;
+    border-left: 5px solid $ocean-green;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    --animation-duration: 10s;
+}
+
+.button {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 50px;
+}
+
+.button a {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    font-size: 14px;
+    color: $black;
+    text-decoration: none;
+    padding: 20px 25px;
+    border: 1px solid $spanish-grey;
+    font-weight: bold;
+    --animation-duration: 5s;
+}
+
+.button a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 0%;
+    color: $white;
+    background: $ocean-green;
+    height: 100%;
+    z-index: -1;
+    transition: width 0.3s ease-in-out;
+    transform: skew(-25deg);
+    transform-origin: right;
+}
+
+.button a:hover:after {
+    width: 150%;
+    left: -10px;
+    transform-origin: left;
+}
+
+.button a:hover {
+    color: $white;
+    transition: all 0.5s ease;
+}
+
+.button a:nth-of-type(1) {
+    border-radius: 50px 0 0 50px;
+    border-right: none;
+}
+
+.button a:nth-of-type(2) {
+    border-radius: 0px 50px 50px 0;
+}
+
+.cart-icon {
+    padding-right: 8px;
+}
+
+@media (max-width: 1024px) {
+    .content {
+        margin-bottom: 50%;
+    }
+    img {
+        position: absolute;
+        width: 45%;
+        height: 45%;
+        top: 0%;
+        right: 5%;
+        margin-top: 13%;
+    }
+    .content {
+        position: absolute;
+        top: 50px;
+        left: 5%;
+        z-index: 3
+    }
+    h1 {
+        font-size: 48px;
+        margin-bottom: 35px;
+    }
+    p {
+        width: 55%;
+        font-size: 18px;
+        line-height: 1.4;
+        color: $black;
+        margin: 15px 0;
+    }
+    .bg {
+        display: inline-block;
+        color: $ecru;
+        border-left: 5px solid $ocean-green;
+        padding: 5px 10px;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 35px;
+    }
+    .button {
+        width: fit-content;
+        height: fit-content;
+        margin-top: 35px;
+    }
+    .button a {
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        margin-bottom: 50%;
+    }
+    img {
+        position: absolute;
+        width: 45%;
+        height: 45%;
+        top: 0%;
+        right: 5%;
+        margin-top: 17%;
+    }
+    .content {
+        position: absolute;
+        top: 60px;
+        left: 5%;
+        z-index: 3
+    }
+    h1 {
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+    p {
+        width: 45%;
+        font-size: 16px;
+        line-height: 1.4;
+        color: $black;
+        margin: 15px 0;
+    }
+    .bg {
+        display: inline-block;
+        color: $ecru;
+        border-left: 5px solid $ocean-green;
+        padding: 5px 10px;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    .button {
+        width: fit-content;
+        height: fit-content;
+        margin-top: 30px;
+    }
+    .button a {
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+}
+
+@media (max-width: 540px) {
+    .content {
+        margin-bottom: 50%;
+    }
+    img {
+        position: absolute;
+        width: 85%;
+        height: 45%;
+        top: -10%;
+        right: 7%;
+        margin-top: 15%;
+    }
+    .content {
+        position: absolute;
+        top: 235px;
+        left: 15px;
+        z-index: 3
+    }
+    h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+    p {
+        width: 95%;
+        font-size: 16px;
+        line-height: 1.4;
+        color: $black;
+        margin: 5px 0;
+    }
+    .bg {
+        display: inline-block;
+        color: $ecru;
+        border-left: 3px solid $ocean-green;
+        padding: 5px 10px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .button {
+        width: fit-content;
+        height: fit-content;
+        margin-top: 12px;
+    }
+    .button a {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 414px) {
+    .content {
+        margin-bottom: 50%;
+    }
+    img {
+        position: absolute;
+        width: 90%;
+        height: 40%;
+        top: 0px;
+        right: 3%;
+        margin-top: 10%;
+    }
+    .content {
+        position: absolute;
+        top: 225px;
+        left: 15px;
+        z-index: 3
+    }
+    h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    p {
+        width: 95%;
+        font-size: 16px;
+        line-height: 1.4;
+        color: $black;
+        margin: 5px 0;
+    }
+    .bg {
+        display: inline-block;
+        color: $ecru;
+        border-left: 3px solid $ocean-green;
+        padding: 5px 10px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .button {
+        width: fit-content;
+        height: fit-content;
+        margin-top: 15px;
+    }
+    .button a {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .content {
+        margin-bottom: 50%;
+    }
+    img {
+        position: absolute;
+        width: 95%;
+        height: 45%;
+        top: 0%;
+        right: 3%;
+        margin-top: 10%;
+    }
+    .content {
+        position: absolute;
+        top: 235px;
+        left: 15px;
+        z-index: 3
+    }
+    h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    p {
+        width: 95%;
+        font-size: 16px;
+        line-height: 1.4;
+        color: $black;
+        margin: 5px 0;
+    }
+    .bg {
+        display: inline-block;
+        color: $ecru;
+        border-left: 3px solid $ocean-green;
+        padding: 5px 10px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .button {
+        width: fit-content;
+        height: fit-content;
+        margin-top: 12px;
+    }
+    .button a {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 280px) {
+    .content {
+        margin-bottom: 40%;
+    }
+    img {
+        position: absolute;
+        width: 95%;
+        height: 45%;
+        top: 0%;
+        right: 3%;
+        margin-top: 15%;
+    }
+    .content {
+        position: absolute;
+        top: 250px;
+        left: 15px;
+        z-index: 3
+    }
+    h1 {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+    p {
+        width: 95%;
+        font-size: 12px;
+        line-height: 1.4;
+        color: $black;
+        margin: 5px 0;
+    }
+    .bg {
+        display: inline-block;
+        color: $ecru;
+        border-left: 3px solid $ocean-green;
+        padding: 5px 10px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .button {
+        width: fit-content;
+        height: fit-content;
+        margin-top: 7px;
+    }
+    .button a {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+}

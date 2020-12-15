@@ -1,0 +1,53 @@
+<!-- <h1 class="h3 mb-2 text-gray-800">Category</h1> -->
+<div class="card shadow mb-4">
+    <div class="card-header py-2 pt-3">
+        <h4 class="h4  text-gray-800">Category</h4>
+    </div>
+    <div class="card-body">
+        <form class="needs-validation" novalidate>
+            <div class="form-row">
+                <div class="input-group col-12 mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default"> <i class="fa fa-folder-open" aria-hidden="true"></i></span>
+                    </div>
+                    <input type="text" name="CategoryName" [(ngModel)]='CategoryName' class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Your Category..." id="validationCustom0" required>
+                    <div class="invalid-feedback">
+                        Please provide a Category Name.
+                    </div>
+                </div>
+                <div class=" col-12 mb-3">
+                    <button type="submit" (click)="saveCategory()" class="btn btn-primary btn-md btn-block " id="save"> <i class="fas fa-save fa-fw mr-2"></i> Save </button>
+                    <button type="submit" (click)="saveAfterEditCategory()" class="btn btn-primary btn-md btn-block" id="edit" style="display: none;"> <i class="fas fa-save fa-fw mr-2"></i>Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Category</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table id="datatable example" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-bordered d-table row-border stripe hover" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th class="dt-head-right">Actions</th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="categories?.length != 0">
+                    <tr *ngFor="let category of categories">
+                        <td class="dt-body-left text-truncate" style="max-width: 250px;">{{ category.categoryName }}</td>
+                        <td class="d-flex justify-content-center">
+                            <a type="button" (click)="deleteCategory(category.categoryId)" class=" " placement="left" ngbTooltip="Remove"> <i class="fas fa-trash fa-fw mr-2"></i></a>
+                            <a type="button" (click)="editCategory(category)" class=" " placement="right" ngbTooltip="Edit"> <i class="fas fa-edit fa-fw mr-2"></i></a>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

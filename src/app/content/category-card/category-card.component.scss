@@ -1,0 +1,244 @@
+@import "../../app.component.scss";
+.Title {
+    color: $black;
+    font-size: 2.5em;
+    .under-line {
+        font-weight: 800;
+        color: $black;
+        background-image: linear-gradient( transparent calc(75% - 5px), lighten($pear, 5%) 5px, );
+        background-size: 0;
+        background-repeat: no-repeat;
+        display: inline;
+        transition: 0.5s ease;
+    }
+    &:hover {
+        .under-line {
+            background-size: 100%;
+        }
+    }
+}
+
+
+/*********************** Category *******************/
+
+.box8 .icon,
+.box8 .title {
+    margin: 0;
+    position: absolute
+}
+
+.box8 {
+    overflow: hidden;
+    box-shadow: 0 0 3px rgba($black, 0.1);
+    border: 5px solid $white;
+    position: relative;
+    text-align: center
+}
+
+.box8:hover {
+    border: 5px solid $ocean-green;
+}
+
+.box8 img {
+    width: 100%;
+    height: 245px;
+    transition: all 1.5s ease 0s
+}
+
+@media only screen and (max-width:812px) {
+    .box8 img {
+        height: 180px;
+    }
+}
+
+@media only screen and (max-width:653px) {
+    .box8 img {
+        height: 200px;
+    }
+}
+
+.box8:hover img {
+    transform: scale(1.2)
+}
+
+.box8 .box-content {
+    width: 100%;
+    height: 100%;
+    background: rgba($ocean-green, 0.3);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: perspective(400px);
+    transform-origin: center top 0;
+    transition: all .5s ease 0s
+}
+
+.box8 .icon li a,
+.box8 .title {
+    font-size: 20px;
+    color: $white;
+    border-left: 5px solid $ocean-green;
+    background-color: rgba($powder-blue, 0.7);
+    border-radius: 0%;
+}
+
+.box8:hover .box-content {
+    opacity: 1;
+}
+
+.box8 .title {
+    padding: 5px 7px;
+    font-weight: 580;
+    bottom: 20px;
+    left: 20px;
+    transition: all .9s ease 0s
+}
+
+.box8:hover .title {
+    bottom: -40px
+}
+
+.box8 .icon {
+    list-style: none;
+    padding: 0;
+    top: 42%;
+    left: 0;
+    right: 0
+}
+
+.box8 .icon li a {
+    transition: all .35s ease 0s;
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 7px
+}
+
+@media only screen and (max-width:990px) {
+    .box8 {
+        margin-bottom: 20px
+    }
+}
+
+.box8 .icon,
+.box8 .title {
+    transition: all .2s ease 0s
+}
+
+.box8 .icon {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0
+}
+
+.box8:hover .icon {
+    opacity: 1
+}
+
+.box8 .icon li {
+    display: inline-block
+}
+
+.box8 .icon li:first-child a,
+.box8 .icon li:last-child a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    color: $white;
+    border: 2px solid $white;
+    position: relative
+}
+
+.box8 .icon li a {
+    top: -150px
+}
+
+.box8:hover .icon li a {
+    top: 0
+}
+
+.box8:hover .icon li:first-child a:hover {
+    background: $ocean-green;
+    border-color: darken($color: $ocean-green, $amount: 9%)
+}
+
+.box8 .icon li:first-child a {
+    transition: all .6s cubic-bezier(.175, .885, .32, 1.275) 0s
+}
+
+@media (max-width: 1024px) {
+    .Title {
+        font-size: 2.4em;
+        .under-line {
+            font-weight: 800;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .Title {
+        font-size: 1.8em;
+        .under-line {
+            font-weight: 800;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .Title {
+        font-size: 1.4em;
+        .under-line {
+            font-weight: 800;
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    .Title {
+        font-size: 1.4em;
+        .under-line {
+            font-weight: 800;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .Title {
+        font-size: 1.4em;
+        .under-line {
+            font-weight: 800;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .Title {
+        font-size: 1.4em;
+        .under-line {
+            font-weight: 800;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .Title {
+        font-size: 1.4em;
+        .under-line {
+            font-weight: 800;
+        }
+    }
+}
+
+@media (max-width: 280px) {
+    .Title {
+        font-size: 1.4em;
+        .under-line {
+            font-weight: 800;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@import "../app.component.scss";
+.scroll-to-top {
+    position: fixed;
+    z-index: 2000;
+    // border: #4e73df 1px;
+    // border-radius: 100%;
+    right: 1rem;
+    bottom: 1rem;
+    display: none;
+    width: 2.65rem;
+    height: 2.65rem;
+    text-align: center;
+    color: $white;
+    background: rgba($ecru, 0.5);
+    line-height: 46px;
+}
+
+.scroll-to-top:focus,
+.scroll-to-top:hover {
+    color: $white;
+}
+
+.scroll-to-top:hover {
+    background: $ecru;
+}
+
+.scroll-to-top i {
+    color: $white;
+    font-weight: 800;
+}

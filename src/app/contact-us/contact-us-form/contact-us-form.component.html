@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-12 card-title mb-1 mt-1 text-center mb-5 Title" data-aos="fade-up" data-aos-duration="3000"> <span class="under-line">Tell Us How We Can Help You</span> </div>
+            <div class="well well-sm">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">
+                              Name</label>
+                                <input type="text" class="form-control" name="name" id="name" [(ngModel)]='name' placeholder="Enter name" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">
+                              Email Address</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                    </span>
+                                    <input type="email" name="email" class="form-control" id="email" [(ngModel)]='email' placeholder="Enter email" required="required" /></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">
+                              Subject</label>
+                                <input id="subject" name="subject" class="form-control" [(ngModel)]='subject' placeholder="Enter Subject" required="required"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">
+                              Message</label>
+                                <textarea name="message" id="message" class="form-control" rows="8" cols="25" [(ngModel)]='body' required="required" placeholder="Type Your Message..."></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <a type="button" href="" (click)="sendMail()" class="btn btn-block " id="btnContactUs">
+                          Send Message <i class='bx bxl-telegram bx-fw'></i> </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,373 @@
+@import "../../app.component.scss";
+* {
+    font-family: Montserrat;
+}
+
+.pd-wrap {
+    padding: 40px 0;
+    // font-family: 'Poppins', sans-serif;
+}
+
+.carousel-testimonial .item {
+    padding: 16px 16px;
+}
+
+.owl-nav button {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    outline: none;
+    height: 25px;
+}
+
+.owl-nav button svg {
+    width: 25px;
+    height: 25px;
+}
+
+.owl-nav button.owl-prev {
+    left: 25px;
+}
+
+.owl-nav button.owl-next {
+    right: 25px;
+}
+
+.owl-nav button span {
+    font-size: 45px;
+}
+
+.product-thumb .item img {
+    height: 70px;
+    width: 70px;
+}
+
+.product-name {
+    font-size: 24px;
+    font-weight: 500;
+    color: $black;
+    line-height: 22px;
+    margin-bottom: 4px;
+}
+
+.product-price-discount {
+    font-size: 22px;
+    font-weight: 400;
+    color: $black;
+    padding: 10px 0;
+    clear: both;
+}
+
+.product-price-discount span.line-through {
+    text-decoration: line-through;
+    margin-left: 10px;
+    font-size: 14px;
+    vertical-align: middle;
+    color: $middle-blue;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.product-info {
+    width: 100%;
+}
+
+.reviews-counter {
+    font-size: 13px;
+}
+
+.reviews-counter span {
+    vertical-align: -2px;
+}
+
+.rate {
+    float: left;
+    padding: 0 10px 0 0;
+}
+
+.rate:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate:not(:checked)>label {
+    float: right;
+    width: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 21px;
+    color: $powder-blue;
+    margin-bottom: 0;
+    line-height: 21px;
+}
+
+.rate:not(:checked)>label:before {
+    content: '\2605';
+}
+
+.rate>input:checked~label {
+    color: $ecru;
+}
+
+.rate:not(:checked)>label:hover,
+.rate:not(:checked)>label:hover~label {
+    color: lighten($color: $ecru, $amount: 20%);
+}
+
+.rate>input:checked+label:hover,
+.rate>input:checked+label:hover~label,
+.rate>input:checked~label:hover,
+.rate>input:checked~label:hover~label,
+.rate>label:hover~input:checked~label {
+    color: darken($color: $ecru, $amount: 35%);
+}
+
+.product-dtl p {
+    font-size: 14px;
+    line-height: 24px;
+    color: $black;
+}
+
+.product-dtl .form-control {
+    font-size: 15px;
+}
+
+.product-dtl label {
+    line-height: 16px;
+    font-size: 15px;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.product-count {
+    margin-top: 15px;
+}
+
+.product-count .qtyminus,
+.product-count .qtyplus {
+    width: 34px;
+    height: 34px;
+    background: $black;
+    text-align: center;
+    font-size: 19px;
+    line-height: 36px;
+    color: $white;
+    cursor: pointer;
+}
+
+.product-count .qtyminus {
+    border-radius: 5px 0 0 5px;
+}
+
+.product-count .qtyplus {
+    border-radius: 0 5px 5px 0;
+}
+
+.product-count .qty {
+    width: 60px;
+    text-align: center;
+}
+
+.round-black-btn {
+    border-radius: 4px;
+    background: $ecru;
+    color: $white;
+    font-weight: 500;
+    padding: 7px 45px;
+    display: inline-block;
+    margin-top: 20px;
+    border: solid 2px $ecru;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.round-black-btn:hover,
+.round-black-btn:focus {
+    background: transparent;
+    color: $ecru;
+    text-decoration: none;
+}
+
+.form-control:focus {
+    border-color: $ecru;
+    box-shadow: 0 0 0 0.2rem rgba($ecru, 0.10);
+}
+
+.round-black-btn3 {
+    border-radius: 4px;
+    background: $ecru;
+    color: $white;
+    font-weight: 500;
+    padding: 7px 45px;
+    display: inline-block;
+    margin-top: 20px;
+    border: solid 2px $ecru;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.round-black-btn3:hover,
+.round-black-btn3:focus {
+    background: transparent;
+    color: $ecru;
+    text-decoration: none;
+}
+
+.round-black-btn2 {
+    border-radius: 4px;
+    background: $ocean-green;
+    color: $white;
+    font-weight: 500;
+    padding: 7px 45px;
+    display: inline-block;
+    margin-top: 20px;
+    border: solid 2px $ocean-green;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.round-black-btn2:hover,
+.round-black-btn2:focus {
+    background: transparent;
+    color: $ocean-green;
+    text-decoration: none;
+}
+
+.product-info-tabs {
+    margin-top: 25px;
+}
+
+.product-info-tabs .nav-tabs {
+    border-bottom: 2px solid $ecru;
+}
+
+.product-info-tabs .nav-tabs .nav-item {
+    margin-bottom: 0;
+}
+
+.product-info-tabs .nav-tabs .nav-link {
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: $black;
+}
+
+.product-info-tabs .nav-tabs .nav-item .nav-link:hover {
+    border: none;
+}
+
+.product-info-tabs .nav-tabs .nav-item.show .nav-link,
+.product-info-tabs .nav-tabs .nav-link.active,
+.product-info-tabs .nav-tabs .nav-link.active:hover {
+    border: none;
+    border-bottom: 2px solid $black;
+    font-weight: bold;
+}
+
+.product-info-tabs .tab-content .tab-pane {
+    padding: 30px 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: $color-soft-black;
+}
+
+.label-styling {
+    border-left: 3px solid $ecru;
+    padding-left: 5px;
+    font-weight: 600;
+    color: $black;
+}
+
+.review-form .form-group {
+    clear: both;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.review-form .rate {
+    float: none;
+    display: inline-block;
+}
+
+.review-heading {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    color: $black;
+}
+
+.review-form .form-control {
+    font-size: 14px;
+}
+
+.review-form input.form-control {
+    height: 40px;
+}
+
+.review-form textarea.form-control {
+    resize: none;
+}
+
+.review-form .round-black-btn {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.review-form .round-black-btn2 {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.round-black-btn3 {
+    // text-transform: uppercase;
+    cursor: pointer;
+}
+
+@media (max-width: 414px) {
+    .product-thumb .item img {
+        height: 50px;
+        width: 50px;
+    }
+    .round-black-btn,
+    .round-black-btn2,
+    .round-black-btn3 {
+        padding: 7px 21px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    .product-thumb .item img {
+        height: 45px;
+        width: 45px;
+    }
+    .round-black-btn,
+    .round-black-btn2,
+    .round-black-btn3 {
+        padding: 7px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 280px) {
+    .product-thumb .item img {
+        height: 45px;
+        width: 45px;
+    }
+    .round-black-btn,
+    .round-black-btn2,
+    .round-black-btn3 {
+        padding: 7px 14px;
+        font-size: 10px;
+    }
+}
