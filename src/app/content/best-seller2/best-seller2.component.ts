@@ -45,6 +45,9 @@ export class BestSeller2Component implements OnInit {
        },
        1223: {
         items: 4,
+       },
+       2560: {
+        items:6,
        }
     },
     // nav: true

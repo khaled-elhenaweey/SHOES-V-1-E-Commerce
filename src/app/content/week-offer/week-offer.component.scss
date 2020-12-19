@@ -14,7 +14,7 @@
 
 .outer {
     position: relative;
-    background-image: url('../../../assets/tic-tac-toe.png');
+    background-image: url('../../../assets/img/tic-tac-toe.png');
     background-repeat: repeat repeat-x repeat-y;
     background-size: cover;
     border-top: 5px solid $ocean-green;
@@ -126,6 +126,24 @@ p {
 
 .cart-icon {
     padding-right: 8px;
+}
+
+@media (min-width: 1460px) {
+    .wrapper {
+        height: 70vh;
+    }
+    .content {
+        margin-bottom: 50%;
+    }
+    img {
+        width: 500px;
+        height: 500px;
+        right: 15%;
+        margin-top: 0%;
+    }
+    .content {
+        left: 15%;
+    }
 }
 
 @media (max-width: 1024px) {

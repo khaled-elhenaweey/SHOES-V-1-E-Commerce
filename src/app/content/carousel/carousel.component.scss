@@ -268,26 +268,6 @@
     width: 400px;
 }
 
-@media (max-width: 1024px) {
-    .carousel-item {
-        top: 240px;
-        width: 100%;
-    }
-    #myCarousel .carousel-item {
-        min-height: 750px;
-    }
-}
-
-@media (max-width: 768px) {
-    .carousel-item {
-        top: 240px;
-        width: 100%;
-    }
-    #myCarousel .carousel-item {
-        min-height: 750px;
-    }
-}
-
 @media (max-width: 540px) {
     .carousel-item {
         top: 15px;

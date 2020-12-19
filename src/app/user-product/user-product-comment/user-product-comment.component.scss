@@ -31,12 +31,12 @@
 
 .testimonial {
     font-family: Montserrat;
-    background: $color-grey;
+    background: $powder-blue;
     border-radius: 3px;
     border: none;
     box-shadow: 0 2px 0 0 rgba($black, 0.10);
     position: relative;
-    color: $color-soft-black;
+    color: $black;
     padding: 20px;
     margin-bottom: 30px;
     &:before,
@@ -76,7 +76,7 @@
     display: block;
     line-height: 1.2;
     .name {
-        color: lighten($color-grey, 40%);
+        color: lighten($powder-blue, 40%);
     }
     strong {
         display: block;

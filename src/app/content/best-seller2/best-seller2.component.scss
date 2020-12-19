@@ -336,6 +336,15 @@
     white-space: nowrap;
 }
 
+@media (min-width: 1460px) {
+    .Title {
+        font-size: 3.4em;
+        .under-line {
+            font-weight: 900;
+        }
+    }
+}
+
 @media (max-width: 1024px) {
     .Title {
         font-size: 2.4em;

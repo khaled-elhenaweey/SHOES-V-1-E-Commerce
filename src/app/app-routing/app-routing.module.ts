@@ -1,6 +1,7 @@
-import { AppComponent } from './../app.component';
-import { FooterComponent } from './../footer/footer.component';
-import { HeaderComponent } from './../header/header.component';
+import { UserProductListComponent } from './../user-product-list/user-product-list.component';
+// import { AppComponent } from './../app.component';
+// import { FooterComponent } from './../footer/footer.component';
+// import { HeaderComponent } from './../header/header.component';
 import { AdminContentComponent } from './../admin-panel/admin-content/admin-content.component';
 import { AdminMainComponent } from './../admin-panel/admin-main/admin-main.component';
 import { AdminProductComponent } from './../admin-panel/admin-content/admin-product/admin-product.component';
@@ -38,6 +39,9 @@ const routes: Routes = [
         {
           path: 'Product',
           component: UserProductComponent
+        },        {
+          path: 'ProductList',
+          component: UserProductListComponent
         },
       ]
      },

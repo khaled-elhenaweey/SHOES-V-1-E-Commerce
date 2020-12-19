@@ -45,18 +45,16 @@
     transition: all 1.5s ease 0s
 }
 
-@media only screen and (max-width:812px) {
-    .box8 img {
-        height: 180px;
-    }
-}
-
-@media only screen and (max-width:653px) {
-    .box8 img {
-        height: 200px;
-    }
-}
-
+// @media only screen and (max-width:812px) {
+//     .box8 img {
+//         height: 180px;
+//     }
+// }
+// @media only screen and (max-width:653px) {
+//     .box8 img {
+//         height: 200px;
+//     }
+// }
 .box8:hover img {
     transform: scale(1.2)
 }
@@ -116,12 +114,11 @@
     margin-right: 7px
 }
 
-@media only screen and (max-width:990px) {
-    .box8 {
-        margin-bottom: 20px
-    }
-}
-
+// @media only screen and (max-width:990px) {
+//     .box8 {
+//         margin-bottom: 20px
+//     }
+// }
 .box8 .icon,
 .box8 .title {
     transition: all .2s ease 0s
@@ -169,6 +166,30 @@
 
 .box8 .icon li:first-child a {
     transition: all .6s cubic-bezier(.175, .885, .32, 1.275) 0s
+}
+
+@media (min-width: 1460px) {
+    .Title {
+        font-size: 3.4em;
+        .under-line {
+            font-weight: 900;
+        }
+    }
+    .box8 img {
+        height: 460px;
+    }
+    .box8 .icon li:first-child a,
+    .box8 .icon li:last-child a {
+        display: block;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 30px;
+    }
+    .box8 .title {
+        font-weight: 600;
+        font-size: 36px;
+    }
 }
 
 @media (max-width: 1024px) {

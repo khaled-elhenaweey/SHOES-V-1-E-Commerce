@@ -38,6 +38,7 @@ import { UserProductComponent } from './user-product/user-product.component';
 import { UserProductMainComponent } from './user-product/user-product-main/user-product-main.component';
 import { UserProductCommentComponent } from './user-product/user-product-comment/user-product-comment.component';
 import { UserProductCarouselComponent } from './user-product/user-product-carousel/user-product-carousel.component';
+import { UserProductListComponent } from './user-product-list/user-product-list.component';
 
 
 @NgModule({
@@ -69,6 +70,7 @@ import { UserProductCarouselComponent } from './user-product/user-product-carous
     UserProductMainComponent,
     UserProductCommentComponent,
     UserProductCarouselComponent,
+    UserProductListComponent,
 
   ],
   imports: [
