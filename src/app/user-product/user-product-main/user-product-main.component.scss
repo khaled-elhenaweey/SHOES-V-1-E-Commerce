@@ -5,7 +5,6 @@
 
 .pd-wrap {
     padding: 40px 0;
-    // font-family: 'Poppins', sans-serif;
 }
 
 .carousel-testimonial .item {
@@ -333,7 +332,7 @@
     cursor: pointer;
 }
 
-@media (min-width: 1460px) {
+@media (min-width: 2560px) {
     .product-slider .item img {
         margin-left: 140px;
         height: 800px;
@@ -378,6 +377,14 @@
     .review-heading {
         font-size: 28px;
         line-height: 28px;
+    }
+    .label-styling span {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 24px;
+    }
+    .form-control {
+        height: 40px;
     }
 }
 

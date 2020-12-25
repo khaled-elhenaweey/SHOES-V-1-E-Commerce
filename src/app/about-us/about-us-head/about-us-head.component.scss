@@ -53,6 +53,18 @@ h1 {
     }
 }
 
+@media (min-width: 2560px) {
+    h1 {
+        font-size: 120px;
+    }
+    .text {
+        font-size: 36px;
+    }
+    .btn {
+        font-size: 32px;
+    }
+}
+
 @media (max-width: 1024px) {
     .jumbotron {
         height: 100vh;

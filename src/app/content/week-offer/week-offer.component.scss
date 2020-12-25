@@ -146,6 +146,12 @@ p {
     }
 }
 
+@media (min-width: 2560px) {
+    .outer {
+        height: 640px;
+    }
+}
+
 @media (max-width: 1024px) {
     .content {
         margin-bottom: 50%;

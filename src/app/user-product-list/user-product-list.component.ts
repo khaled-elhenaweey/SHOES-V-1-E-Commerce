@@ -28,7 +28,7 @@ $(document).ready(function () {
         if (sliders[y].type === 'range') {
           sliders[y].oninput = getVals;
           // Manually trigger event first time to display values
-          sliders[y].oninput();
+          sliders[y].oninput(event);
         }
       }
     }

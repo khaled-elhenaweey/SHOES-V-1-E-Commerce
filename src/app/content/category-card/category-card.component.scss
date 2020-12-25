@@ -45,16 +45,6 @@
     transition: all 1.5s ease 0s
 }
 
-// @media only screen and (max-width:812px) {
-//     .box8 img {
-//         height: 180px;
-//     }
-// }
-// @media only screen and (max-width:653px) {
-//     .box8 img {
-//         height: 200px;
-//     }
-// }
 .box8:hover img {
     transform: scale(1.2)
 }
@@ -114,11 +104,6 @@
     margin-right: 7px
 }
 
-// @media only screen and (max-width:990px) {
-//     .box8 {
-//         margin-bottom: 20px
-//     }
-// }
 .box8 .icon,
 .box8 .title {
     transition: all .2s ease 0s

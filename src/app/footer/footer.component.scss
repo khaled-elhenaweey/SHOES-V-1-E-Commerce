@@ -105,30 +105,25 @@ button:focus {
     cursor: pointer;
 }
 
-@-moz-keyframes myfirst {
-    0% {
-        left: -25%;
+@media (min-width: 2560px) {
+    .footer_bottom {
+        font-size: 20px;
+        font-weight: 400;
     }
-    100% {
-        left: 100%;
+    .new_footer_top .company_widget p {
+        font-size: 22px;
+        font-weight: 400;
     }
-}
-
-@-webkit-keyframes myfirst {
-    0% {
-        left: -25%;
+    .f_size_18 {
+        font-size: 26px;
     }
-    100% {
-        left: 100%;
+    a {
+        font-size: 22px;
     }
-}
-
-@keyframes myfirst {
-    0% {
-        left: -25%;
-    }
-    100% {
-        left: 100%;
+    .icon-size {
+        width: 62px;
+        height: 62px;
+        margin-left: 12px;
     }
 }
 

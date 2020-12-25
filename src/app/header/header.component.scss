@@ -35,9 +35,6 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
-    /* Small devices (landscape phones, 576px and up) */
-
-    @media (min-width: 576px) {}
     /* Medium devices (tablets, 768px and up) */
 
     @media (min-width: 768px) {
@@ -279,16 +276,6 @@
         width: calc(100% - 45px);
     }
 
-    // .avatar {
-    //     border-radius: 50%;
-    //     width: 4.5rem;
-    //     height: 4.5rem;
-    //     margin-right: 8px;
-    // }
-    // .avatar.avatar-xs {
-    //     width: 2.25rem;
-    //     height: 2.25rem;
-    // }
     .user-dropdown .dropdown-menu {
         left: auto;
         right: 0;
@@ -299,19 +286,11 @@
         font-size: large;
     }
 
-    // .btn-darkred {
-    //     // background-color: $spanish-grey;
-    //     color: $black;
-    // }
-    // .btn-close {
-    //     color: $spanish-grey;
-    // }
     .btn-search {
         background-color: $ecru;
     }
 
     .btn-login2 {
-        // background-color: $spanish-grey;
         color: $black;
     }
 
@@ -345,16 +324,31 @@
         margin-top: 1.7px;
     }
 
-    //logo size
-    .logo-size {
-        width: 120px;
-        height: 105px;
-    }
-
     //make the logo responsive
     .logo-size {
         width: 150px;
         height: 135px;
+    }
+
+    @media (min-width: 2560px) {
+        .form-inline .form-control {
+            width: 1200px;
+        }
+        .sub-menu {
+            padding: 0 2rem;
+        }
+        .sub-menu.navbar-expand-md .navbar-nav .nav-link {
+            padding: 2rem 4.34rem;
+            font-size: 20px;
+        }
+        .logo-size {
+            margin-left: 150px;
+            width: 200px;
+            height: 170px;
+        }
+        ul.extrascreen {
+            margin-right: 150px;
+        }
     }
 
     @media (max-width: 640px) {
@@ -363,19 +357,3 @@
             height: 70px;
         }
     }
-
-    // .btn_get_two:hover {
-    //     background: transparent;
-    //     color: $spanish-grey;
-    // }
-    // .btn_get_two {
-    //     -webkit-box-shadow: none;
-    //     box-shadow: none;
-    //     // background: $spanish-grey;
-    //     // border-color: $color-soft-babe-blue;
-    //     color: $black;
-    // }
-    // .btn_get_two:hover {
-    //     background: transparent;
-    //     color: $black;
-    // }

@@ -18,18 +18,6 @@
     }
 }
 
-@media only screen and (max-width:812px) {
-    .head-category {
-        font-size: 42px;
-    }
-}
-
-@media only screen and (max-width:653px) {
-    .head-category {
-        font-size: 28px;
-    }
-}
-
 // =======================
 .d-flex {
     display: -webkit-box;
@@ -68,56 +56,9 @@
     padding: 15px;
     margin: 15px auto;
     background-color: $white;
-    border: 0.5px solid;
+    border: 1px solid;
     border-color: $spanish-grey;
     box-shadow: ($spanish-grey, 0.25);
-}
-
-@media (max-width: 991px) {
-    .el-wrapper {
-        width: 240px;
-    }
-}
-
-@media (max-width: 767px) {
-    .el-wrapper {
-        width: 210px;
-        margin: 30px auto;
-    }
-}
-
-@media (max-width: 540px) {
-    .el-wrapper {
-        width: 240px;
-        margin: 30px auto;
-    }
-}
-
-@media (max-width: 540px) {
-    .el-wrapper {
-        width: 240px;
-        margin: 30px auto;
-    }
-}
-
-@media (max-width: 414px) {
-    .el-wrapper {
-        width: 300px;
-        margin: 30px auto;
-    }
-}
-
-@media (max-width: 280px) {
-    .el-wrapper {
-        width: 220px;
-        margin: 30px auto;
-    }
-}
-
-.el-wrapper:hover {
-    border: 0.5px solid;
-    border-color: $ocean-green;
-    box-shadow: ($ocean-green, 0.25);
 }
 
 .el-wrapper:hover .h-bg {
@@ -138,11 +79,9 @@
 }
 
 .el-wrapper:hover .img {
-    // webkit-filter: blur(7px);
     -o-filter: blur(7px);
     -ms-filter: blur(7px);
     filter: blur(7px);
-    // filter: progid: DXImageTransform.Microsoft.Blur(pixelradius='7', shadowopacity='0.0');
     opacity: 0.4;
 }
 
@@ -235,7 +174,7 @@
 }
 
 .info-inner .p-name {
-    font-family: 'PT Sans', sans-serif;
+    font-weight: 500;
     font-size: 18px;
     color: $black;
 }
@@ -267,7 +206,7 @@
     position: absolute;
     width: 100%;
     bottom: -20px;
-    font-family: 'PT Sans', sans-serif;
+    font-weight: 500;
     color: $middle-blue;
     opacity: 0;
 }
@@ -352,9 +291,16 @@
             font-weight: 800;
         }
     }
+    .el-wrapper {
+        width: 240px;
+    }
 }
 
 @media (max-width: 768px) {
+    .el-wrapper {
+        width: 210px;
+        margin: 30px auto;
+    }
     .Title {
         font-size: 1.8em;
         .under-line {
@@ -364,6 +310,10 @@
 }
 
 @media (max-width: 540px) {
+    .el-wrapper {
+        width: 240px;
+        margin: 30px auto;
+    }
     .Title {
         font-size: 1.4em;
         .under-line {
@@ -373,6 +323,10 @@
 }
 
 @media (max-width: 414px) {
+    .el-wrapper {
+        width: 300px;
+        margin: 30px auto;
+    }
     .Title {
         font-size: 1.4em;
         .under-line {
@@ -406,13 +360,27 @@
             font-weight: 800;
         }
     }
+    .el-wrapper {
+        width: 260px;
+        margin: 5px;
+    }
 }
 
 @media (max-width: 280px) {
+    .el-wrapper {
+        width: 220px;
+        margin: 30px auto;
+    }
     .Title {
         font-size: 1.4em;
         .under-line {
             font-weight: 800;
         }
     }
+}
+
+.el-wrapper:hover {
+    border: 0.5px solid;
+    border-color: $ocean-green;
+    box-shadow: ($ocean-green, 0.25);
 }
