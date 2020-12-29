@@ -14,19 +14,13 @@ export class WeekOfferComponent implements OnInit {
 
   ngOnInit(): void {
     this.getOffers();
-    $('h2').on("touchstart",function (){
-  //simply starts listening for touchstart - allows for hover state on touch devices
-});
+    $('h2').on("touchstart", function () {
+      //simply starts listening for touchstart - allows for hover state on touch devices
+    });
   }
   async getOffers(): Promise<any> {
-    let resualt = await this.productSerivce.getOffers();
-    resualt.subscribe(
-      data => {
-        this.products=data;
-      },
-      error1 => {
-        console.log(error1);
-      }
-    );
+    let res = await this.productSerivce.getOffers();
+    console.log(res);
+    this.products = res;
   }
 }

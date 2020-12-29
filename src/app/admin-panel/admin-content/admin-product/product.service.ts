@@ -10,21 +10,22 @@ export class ProductService {
   baseUrl: string;
   postProductUrl: string;
   postImageUrl: string;
-  bestSellerUrl:string;
-  newArrivalUrl:string;
-  offersUrl:string;
+  bestSellerUrl: string;
+  newArrivalUrl: string;
+  offersUrl: string;
   constructor(private http: HttpClient) {
     this.baseUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/products';
     this.postProductUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/products/PostProduct';
     this.postImageUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/products/PostImage';
-    this.bestSellerUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/Products/BestProducts‏';
-    this.newArrivalUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/Products/NewProducts‏';
+    this.bestSellerUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/Products/bestproducts';
+    this.newArrivalUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/Products/newproducts';
     this.offersUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/products';
   }
   async getProduct(): Promise<any> {
     return await this.http.get<Product[]>(this.baseUrl).toPromise();
   }
   async getBestSeller(): Promise<any> {
+    console.log(this.bestSellerUrl);
     return await this.http.get<Product[]>(this.bestSellerUrl).toPromise();
   }
   async getNewArrival(): Promise<any> {
@@ -33,7 +34,7 @@ export class ProductService {
   async getOffers(): Promise<any> {
     return await this.http.get<Product>(this.offersUrl).toPromise();
   }
-  async getProductById(id:number): Promise<any> {
+  async getProductById(id: number): Promise<any> {
     return await this.http.get<Product[]>(this.baseUrl + "/" + id).toPromise();
   }
   async saveProduct(newProduct: Product): Promise<any> {

@@ -32,7 +32,7 @@ export class BestSellerComponent implements OnInit {
       0: {
         items: 1
 
-          },
+      },
       400: {
         items: 1
       },
@@ -44,29 +44,23 @@ export class BestSellerComponent implements OnInit {
       },
       940: {
         items: 3,
-       },
-       1223: {
+      },
+      1223: {
         items: 4,
-       },
-       2560: {
-        items:6,
-       }
+      },
+      2560: {
+        items: 6,
+      }
     },
     // nav: true
   };
 
-  ngOnInit(): void{
-   this.getBestSeller();
+  ngOnInit(): void {
+    this.getBestSeller();
   }
   async getBestSeller(): Promise<any> {
-    let resualt = await this.productSerivce.getBestSeller();
-    resualt.subscribe(
-      data => {
-        this.products=data;
-      },
-      error1 => {
-        console.log(error1);
-      }
-    );
+    let res = await this.productSerivce.getBestSeller();
+    console.log(res);
+    this.products = res;
   }
 }

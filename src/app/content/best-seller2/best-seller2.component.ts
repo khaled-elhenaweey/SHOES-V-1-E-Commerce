@@ -32,11 +32,11 @@ export class BestSeller2Component implements OnInit {
       0: {
         items: 1
 
-          },
+      },
       400: {
         items: 1
       },
-      540:{
+      540: {
         items: 2
       },
       740: {
@@ -44,28 +44,22 @@ export class BestSeller2Component implements OnInit {
       },
       940: {
         items: 3,
-       },
-       1223: {
+      },
+      1223: {
         items: 4,
-       },
-       2560: {
-        items:6,
-       }
+      },
+      2560: {
+        items: 6,
+      }
     },
     // nav: true
   };
-  ngOnInit(): void{
+  ngOnInit(): void {
     this.getNewArrival();
-   }
-   async getNewArrival(): Promise<any> {
-     let resualt = await this.productSerivce.getNewArrival();
-     resualt.subscribe(
-       data => {
-         this.products=data;
-       },
-       error1 => {
-         console.log(error1);
-       }
-     );
-   }
- }
+  }
+  async getNewArrival(): Promise<any> {
+    let res = await this.productSerivce.getNewArrival();
+    console.log(res);
+    this.products = res;
+  }
+}
