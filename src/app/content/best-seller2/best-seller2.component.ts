@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from './../../admin-panel/admin-content/admin-product/product.service';
+import { Product } from './../../admin-panel/admin-content/admin-product/Product';
 import * as $ from 'jquery';
 import 'owl.carousel';
 import { OwlOptions } from 'ngx-owl-carousel-o';
@@ -9,8 +11,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./best-seller2.component.scss']
 })
 export class BestSeller2Component implements OnInit {
-
-  constructor() { }
+  products: Product[];
+  constructor(private productSerivce: ProductService) { }
   customOptions: OwlOptions = {
     loop: true,
     autoplay: true,
@@ -52,7 +54,18 @@ export class BestSeller2Component implements OnInit {
     },
     // nav: true
   };
-
   ngOnInit(): void{
-  }
-}
+    this.getNewArrival();
+   }
+   async getNewArrival(): Promise<any> {
+     let resualt = await this.productSerivce.getNewArrival();
+     resualt.subscribe(
+       data => {
+         this.products=data;
+       },
+       error1 => {
+         console.log(error1);
+       }
+     );
+   }
+ }

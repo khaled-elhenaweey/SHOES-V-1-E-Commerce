@@ -10,10 +10,11 @@ export class Product {
   categoryId: number | null;
   category: Category;
   imgsList: number[];
+  image:string;
 
 
   // tslint:disable-next-line: max-line-length
-  constructor(public _productId: number, public _productName: string, public _productPrice: number, public _qty: number, public _description: string, public _categoryId: number) {
+  constructor(public _productId: number, public _productName: string, public _productPrice: number, public _qty: number, public _description: string, public _categoryId: number,public _image: string) {
     this.productId = _productId;
     this.productName = _productName;
     this.qty = _qty;
@@ -21,6 +22,7 @@ export class Product {
     // this.rate = _rate;
     this.categoryId = _categoryId;
     this.productPrice = _productPrice;
+    this.image = _image;
   }
 }
 

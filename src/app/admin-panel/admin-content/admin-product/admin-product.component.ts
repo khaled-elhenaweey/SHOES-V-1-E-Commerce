@@ -60,6 +60,7 @@ export class AdminProductComponent implements OnInit, OnDestroy {
   rate: number | null;
   categoryId: number | null;
   products: Product[];
+  image : string;
   selectedValue :number = 0;
   categories: Category[];
   categorySelected: number;
@@ -85,12 +86,12 @@ export class AdminProductComponent implements OnInit, OnDestroy {
       autoWidth: true,
 
     };
-    this.http.get<any>('http://ashrafayman96-001-site1.btempurl.com/api/products')
+    this.http.get<any>('http://ashrafayman85-001-site1.dtempurl.com/api/products')
       .subscribe(products => {
         this.products = products;
         this.dtTrigger.next();
       });
-    this.http.get<Category[]>('http://ashrafayman96-001-site1.btempurl.com/api/Categories')
+    this.http.get<Category[]>('http://ashrafayman85-001-site1.dtempurl.com/api/Categories')
       .subscribe(categories => {
         this.categories = categories;
       });
@@ -154,7 +155,7 @@ export class AdminProductComponent implements OnInit, OnDestroy {
   }
 
   async saveProduct(): Promise<void> {
-    var list = await this.http.post('http://ashrafayman96-001-site1.btempurl.com/api/products/PostImage',this.formData).toPromise();
+    var list = await this.http.post('http://ashrafayman85-001-site1.dtempurl.com/api/products/PostImage',this.formData).toPromise();
 
     let productName = this.productName;
     let productId = 0;
@@ -162,8 +163,8 @@ export class AdminProductComponent implements OnInit, OnDestroy {
     let qty = this.qty;
     let description = this.description;
     let categoryId = Number(this.categoryId);
-
-    let newProduct = new Product(productId, productName, productPrice, qty, description, categoryId);
+let image = this.image;
+    let newProduct = new Product(productId, productName, productPrice, qty, description, categoryId, image );
     newProduct.imgsList = list as number[];
     console.log(newProduct);
     let resualt = await this.productSerivce.saveProduct(newProduct);
@@ -215,7 +216,7 @@ export class AdminProductComponent implements OnInit, OnDestroy {
     $("#edit").show();
   }
   async saveAfterEditProduct(): Promise<void> {
-    var list = await this.http.post('http://ashrafayman96-001-site1.btempurl.com/api/products/PostImage',this.formData).toPromise();
+    var list = await this.http.post('http://ashrafayman85-001-site1.dtempurl.com/api/products/PostImage',this.formData).toPromise();
 
     let productName = this.productName;
     let productId = this.productId;
@@ -223,7 +224,8 @@ export class AdminProductComponent implements OnInit, OnDestroy {
     let qty = this.qty;
     let description = this.description;
     let categoryId = Number(this.categoryId);
-    let editedProduct = new Product(productId, productName, productPrice, qty, description, categoryId);
+    let image = this.image;
+    let editedProduct = new Product(productId, productName, productPrice, qty, description, categoryId,image);
     editedProduct.imgsList = list as number[];
     console.log(editedProduct);
     let resualt = await this.productSerivce.editProduct(editedProduct, editedProduct.productId);

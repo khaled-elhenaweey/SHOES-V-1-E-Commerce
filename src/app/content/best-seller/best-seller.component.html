@@ -1,20 +1,21 @@
-<div class="col-12 card-title mb-1 mt-1 text-center my-5 Title" data-aos="fade-up" data-aos-duration="3000"> <span class="under-line">Best Seller</span> </div>
+<div class="col-12 card-title mb-1 mt-1 text-center my-5 Title" data-aos="fade-up" data-aos-duration="3000"> <span class="under-line">Top Reviewed</span> </div>
 
 <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide>
+    <ng-template carouselSlide *ngFor="let products of products">
         <div class="slide">
             <div class="container page-wrapper mr-5">
                 <div class="page-inner">
                     <div class="row">
                         <div class="el-wrapper">
                             <div class="box-up">
-                                <img class="img" src="../../../assets/img/bs-1.png" alt="">
+                                <img class="img" src="{{ products.image
+                                }}" alt="">
                                 <div class="img-info">
                                     <div class="info-inner">
-                                        <span class="p-name">SHOES</span>
+                                        <span class="p-name">{{ products.productName }}</span>
                                         <a href="#" class="p-company"> Wishlist  <i class="bx bx-heart  bx-xs bx-fw bx-flashing-hover icon-single" ></i></a>
                                     </div>
-                                    <div class="a-size">Available: <span class="size">1</span></div>
+                                    <div class="a-size">Available: <span class="size">{{ products.qty }}</span></div>
                                 </div>
                             </div>
 
@@ -24,7 +25,7 @@
                                 </div>
 
                                 <a class="cart" href="#">
-                                    <span class="price">$250</span>
+                                    <span class="price">${{ products.productPrice }}</span>
                                     <span class="add-to-cart">
                   <a href="#" class="txt">Add in cart  <i class="bx bx-cart-alt bx-sm bx-fw bx-tada-hover icon-single" ></i></a>
                               </span>
@@ -36,144 +37,5 @@
             </div>
         </div>
     </ng-template>
-    <ng-template carouselSlide>
-        <div class="slide">
-            <div class="container page-wrapper">
-                <div class="page-inner">
-                    <div class="row">
-                        <div class="el-wrapper">
-                            <div class="box-up">
-                                <img class="img" src="../../../assets/img/bs-2.png" alt="">
-                                <div class="img-info">
-                                    <div class="info-inner">
-                                        <span class="p-name">SHOES</span>
-                                        <a href="#" class="p-company"> Wishlist  <i class="bx bx-heart  bx-xs bx-fw bx-flashing-hover icon-single" ></i></a>
-                                    </div>
-                                    <div class="a-size">Available: <span class="size">1</span></div>
-                                </div>
-                            </div>
 
-                            <div class="box-down">
-                                <div class="h-bg">
-                                    <div class="h-bg-inner"></div>
-                                </div>
-
-                                <a class="cart" href="#">
-                                    <span class="price">$250</span>
-                                    <span class="add-to-cart">
-                                          <a href="#" class="txt">Add in cart  <i class="bx bx-cart-alt bx-sm bx-fw bx-tada-hover icon-single" ></i></a>
-                                                      </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </ng-template>
-    <ng-template carouselSlide>
-        <div class="slide">
-            <div class="container page-wrapper">
-                <div class="page-inner">
-                    <div class="row">
-                        <div class="el-wrapper">
-                            <div class="box-up">
-                                <img class="img" src="../../../assets/img/bs-3.png" alt="">
-                                <div class="img-info">
-                                    <div class="info-inner">
-                                        <span class="p-name">SHOES</span>
-                                        <a href="#" class="p-company"> Wishlist  <i class="bx bx-heart  bx-xs bx-fw bx-flashing-hover icon-single" ></i></a>
-                                    </div>
-                                    <div class="a-size">Available: <span class="size">1</span></div>
-                                </div>
-                            </div>
-
-                            <div class="box-down">
-                                <div class="h-bg">
-                                    <div class="h-bg-inner"></div>
-                                </div>
-
-                                <a class="cart" href="#">
-                                    <span class="price">$250</span>
-                                    <span class="add-to-cart">
-                                          <a href="#" class="txt">Add in cart  <i class="bx bx-cart-alt bx-sm bx-fw bx-tada-hover icon-single" ></i></a>
-                                                      </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </ng-template>
-    <ng-template carouselSlide>
-        <div class="slide">
-            <div class="container page-wrapper">
-                <div class="page-inner">
-                    <div class="row">
-                        <div class="el-wrapper">
-                            <div class="box-up">
-                                <img class="img" src="../../../assets/img/bs-4.png" alt="">
-                                <div class="img-info">
-                                    <div class="info-inner">
-                                        <span class="p-name">SHOES</span>
-                                        <a href="#" class="p-company"> Wishlist  <i class="bx bx-heart  bx-xs bx-fw bx-flashing-hover icon-single" ></i></a>
-                                    </div>
-                                    <div class="a-size">Available: <span class="size">1</span></div>
-                                </div>
-                            </div>
-
-                            <div class="box-down">
-                                <div class="h-bg">
-                                    <div class="h-bg-inner"></div>
-                                </div>
-
-                                <a class="cart" href="#">
-                                    <span class="price">$250</span>
-                                    <span class="add-to-cart">
-                                          <a href="#" class="txt">Add in cart  <i class="bx bx-cart-alt bx-sm bx-fw bx-tada-hover icon-single" ></i></a>
-                                                      </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </ng-template>
-    <ng-template carouselSlide>
-        <div class="slide">
-            <div class="container page-wrapper">
-                <div class="page-inner">
-                    <div class="row">
-                        <div class="el-wrapper">
-                            <div class="box-up">
-                                <img class="img" src="../../../assets/img/bs-7.png" alt="">
-                                <div class="img-info">
-                                    <div class="info-inner">
-                                        <span class="p-name">SHOES</span>
-                                        <a href="#" class="p-company"> Wishlist  <i class="bx bx-heart  bx-xs bx-fw bx-flashing-hover icon-single" ></i></a>
-                                    </div>
-                                    <div class="a-size">Available: <span class="size">1</span></div>
-                                </div>
-                            </div>
-
-                            <div class="box-down">
-                                <div class="h-bg">
-                                    <div class="h-bg-inner"></div>
-                                </div>
-
-                                <a class="cart" href="#">
-                                    <span class="price">$250</span>
-                                    <span class="add-to-cart">
-                                          <a href="#" class="txt">Add in cart  <i class="bx bx-cart-alt bx-sm bx-fw bx-tada-hover icon-single" ></i></a>
-                                                      </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </ng-template>
 </owl-carousel-o>
