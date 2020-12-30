@@ -12,6 +12,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class BestSellerComponent implements OnInit {
 
   products: Product[];
+  filesToConvert : any[] ;
   constructor(private productSerivce: ProductService) { }
   customOptions: OwlOptions = {
     loop: true,
@@ -60,6 +61,7 @@ export class BestSellerComponent implements OnInit {
   }
   async getBestSeller(): Promise<any> {
     let res = await this.productSerivce.getBestSeller();
+    this.filesToConvert=res.image;
     console.log(res);
     this.products = res;
   }

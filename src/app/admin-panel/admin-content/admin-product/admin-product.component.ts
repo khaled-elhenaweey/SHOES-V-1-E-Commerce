@@ -60,7 +60,7 @@ export class AdminProductComponent implements OnInit, OnDestroy {
   rate: number | null;
   categoryId: number | null;
   products: Product[];
-  image : string;
+  image : string[];
   selectedValue :number = 0;
   categories: Category[];
   categorySelected: number;
@@ -71,6 +71,7 @@ export class AdminProductComponent implements OnInit, OnDestroy {
   filesToConvert : any[] ;
   formData = new FormData();
   imageName: string;
+  fileType:string;
 
   @Output() public onUploadFinished = new EventEmitter();
 
@@ -163,8 +164,9 @@ export class AdminProductComponent implements OnInit, OnDestroy {
     let qty = this.qty;
     let description = this.description;
     let categoryId = Number(this.categoryId);
-let image = this.image;
-    let newProduct = new Product(productId, productName, productPrice, qty, description, categoryId, image );
+    let image = this.image;
+    let fileType = this.fileType;
+    let newProduct = new Product(productId, productName, productPrice, qty, description, categoryId, image,fileType );
     newProduct.imgsList = list as number[];
     console.log(newProduct);
     let resualt = await this.productSerivce.saveProduct(newProduct);
@@ -225,7 +227,8 @@ let image = this.image;
     let description = this.description;
     let categoryId = Number(this.categoryId);
     let image = this.image;
-    let editedProduct = new Product(productId, productName, productPrice, qty, description, categoryId,image);
+    let fileType = this.fileType;
+    let editedProduct = new Product(productId, productName, productPrice, qty, description, categoryId,image,fileType);
     editedProduct.imgsList = list as number[];
     console.log(editedProduct);
     let resualt = await this.productSerivce.editProduct(editedProduct, editedProduct.productId);
