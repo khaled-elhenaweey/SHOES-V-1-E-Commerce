@@ -87,12 +87,12 @@ export class AdminProductComponent implements OnInit, OnDestroy {
       autoWidth: true,
 
     };
-    this.http.get<any>('http://ashrafayman85-001-site1.dtempurl.com/api/products')
+    this.http.get<any>('http://localhost:52934/api/products')
       .subscribe(products => {
         this.products = products;
         this.dtTrigger.next();
       });
-    this.http.get<Category[]>('http://ashrafayman85-001-site1.dtempurl.com/api/Categories')
+    this.http.get<Category[]>('http://localhost:52934/api/Categories')
       .subscribe(categories => {
         this.categories = categories;
       });
@@ -156,7 +156,7 @@ export class AdminProductComponent implements OnInit, OnDestroy {
   }
 
   async saveProduct(): Promise<void> {
-    var list = await this.http.post('http://ashrafayman85-001-site1.dtempurl.com/api/products/PostImage',this.formData).toPromise();
+    var list = await this.http.post('http://localhost:52934/api/products/PostImage',this.formData).toPromise();
 
     let productName = this.productName;
     let productId = 0;
@@ -202,9 +202,10 @@ export class AdminProductComponent implements OnInit, OnDestroy {
       // this.imageSource = this.sanitizer.bypassSecurityTrustResourceUrl(`data:image/png;base64, ${resualt.images[i]}`);
       //this.imageSource =this.sanitizer.bypassSecurityTrustUrl(resualt.images[0]);
       //this.filesToConvert.push(this.imageSource)
-
+      $("#save").hide();
+      $("#edit").show();
     console.log(resualt);
-    console.log( this.filesToConvert);
+    console.log( product.productId);
 
   }
   editProduct(product: Product): void {
@@ -218,7 +219,7 @@ export class AdminProductComponent implements OnInit, OnDestroy {
     $("#edit").show();
   }
   async saveAfterEditProduct(): Promise<void> {
-    var list = await this.http.post('http://ashrafayman85-001-site1.dtempurl.com/api/products/PostImage',this.formData).toPromise();
+    var list = await this.http.post('http://localhost:52934/api/products/PostImage',this.formData).toPromise();
 
     let productName = this.productName;
     let productId = this.productId;
@@ -231,6 +232,7 @@ export class AdminProductComponent implements OnInit, OnDestroy {
     let editedProduct = new Product(productId, productName, productPrice, qty, description, categoryId,image,fileType);
     editedProduct.imgsList = list as number[];
     console.log(editedProduct);
+
     let resualt = await this.productSerivce.editProduct(editedProduct, editedProduct.productId);
     if (resualt == true) {
       Swal.fire(

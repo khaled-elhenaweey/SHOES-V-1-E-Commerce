@@ -14,12 +14,12 @@ export class ProductService {
   newArrivalUrl: string;
   offersUrl: string;
   constructor(private http: HttpClient) {
-    this.baseUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/products';
-    this.postProductUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/products/PostProduct';
-    this.postImageUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/products/PostImage';
-    this.bestSellerUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/Products/bestproducts';
-    this.newArrivalUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/Products/newproducts';
-    this.offersUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/products';
+    this.baseUrl = 'http://localhost:52934/api/products';
+    this.postProductUrl = 'http://localhost:52934/api/products/PostProduct';
+    this.postImageUrl = 'http://localhost:52934/api/products/PostImage';
+    this.bestSellerUrl = 'http://localhost:52934/api/Products/bestproducts';
+    this.newArrivalUrl = 'http://localhost:52934/api/Products/newproducts';
+    this.offersUrl = 'http://localhost:52934/api/products';
   }
   async getProduct(): Promise<any> {
     return await this.http.get<Product[]>(this.baseUrl).toPromise();

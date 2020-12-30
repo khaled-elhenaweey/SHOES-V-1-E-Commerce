@@ -9,7 +9,7 @@ import { Category } from './Category';
 export class CategoryServiceService {
   baseUrl: string;
   constructor(private http: HttpClient) {
-    this.baseUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/Categories';
+    this.baseUrl = 'http://localhost:52934/api/Categories';
   }
 
 
