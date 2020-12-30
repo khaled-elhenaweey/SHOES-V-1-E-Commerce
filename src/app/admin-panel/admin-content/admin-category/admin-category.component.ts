@@ -53,7 +53,7 @@ export class AdminCategoryComponent implements OnInit, OnDestroy {
       pageLength: 10,
       autoWidth: true,
     };
-    this.http.get<Category[]>('http://localhost:52934/api/Categories')
+    this.http.get<Category[]>('http://ashrafayman85-001-site1.dtempurl.com/api/Categories')
       .subscribe(categories => {
         this.categories = categories;
         this.dtTrigger.next();

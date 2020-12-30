@@ -87,12 +87,12 @@ export class AdminProductComponent implements OnInit, OnDestroy {
       autoWidth: true,
 
     };
-    this.http.get<any>('http://localhost:52934/api/products')
+    this.http.get<any>('http://ashrafayman85-001-site1.dtempurl.com/api/products')
       .subscribe(products => {
         this.products = products;
         this.dtTrigger.next();
       });
-    this.http.get<Category[]>('http://localhost:52934/api/Categories')
+    this.http.get<Category[]>('http://ashrafayman85-001-site1.dtempurl.com/api/Categories')
       .subscribe(categories => {
         this.categories = categories;
       });
@@ -156,7 +156,7 @@ export class AdminProductComponent implements OnInit, OnDestroy {
   }
 
   async saveProduct(): Promise<void> {
-    var list = await this.http.post('http://localhost:52934/api/products/PostImage',this.formData).toPromise();
+    var list = await this.http.post('http://ashrafayman85-001-site1.dtempurl.com/api/products/PostImage',this.formData).toPromise();
 
     let productName = this.productName;
     let productId = 0;
@@ -219,7 +219,7 @@ export class AdminProductComponent implements OnInit, OnDestroy {
     $("#edit").show();
   }
   async saveAfterEditProduct(): Promise<void> {
-    var list = await this.http.post('http://localhost:52934/api/products/PostImage',this.formData).toPromise();
+    var list = await this.http.post('http://ashrafayman85-001-site1.dtempurl.com/api/products/PostImage',this.formData).toPromise();
 
     let productName = this.productName;
     let productId = this.productId;
