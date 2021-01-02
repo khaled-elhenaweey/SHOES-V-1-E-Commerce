@@ -7,8 +7,9 @@
                 <div class="page-inner">
                     <div class="row">
                         <div class="el-wrapper">
+                            <span class='badge' title='22% Sale!'>22% Sale!</span>
                             <div class="box-up">
-                                <img class="img" src="{{ products.image}}" alt="">
+                                <img class="img" src="data:image/jpeg;base64,{{ products.image}}" alt="">
                                 <div class="img-info">
                                     <div class="info-inner">
                                         <span class="p-name">{{ products.productName }}</span>
@@ -26,8 +27,8 @@
                                 <a class="cart" href="#">
                                     <span class="price">${{ products.productPrice }}</span>
                                     <span class="add-to-cart">
-              <a href="#" class="txt">Add in cart  <i class="bx bx-cart-alt bx-sm bx-fw bx-tada-hover icon-single" ></i></a>
-                          </span>
+                <a href="#" class="txt">Add in cart  <i class="bx bx-cart-alt bx-sm bx-fw bx-tada-hover icon-single" ></i></a>
+                            </span>
                                 </a>
                             </div>
                         </div>
@@ -36,4 +37,5 @@
             </div>
         </div>
     </ng-template>
+
 </owl-carousel-o>

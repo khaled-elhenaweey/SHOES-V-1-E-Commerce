@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="card card-signin flex-row my-3">
+                <div class="card-img-left d-none d-md-flex">
+                    <!-- Background image for card set in CSS! -->
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">Sign Up </h5>
+                    <form class="form-signin">
+                        <div class="form-label-group mt-3">
+                            <label for="inputUserame">Name</label>
+                            <input type="text" id="inputUserame" class="form-control" placeholder="Your Name" required autofocus>
+
+                        </div>
+
+                        <div class="form-label-group mt-3">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Your Email" required>
+
+                        </div>
+
+
+                        <div class="form-label-group mt-3">
+                            <label for="inputPassword">Password</label>
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Your Password" required>
+
+                        </div>
+
+                        <div class="form-label-group mt-3">
+                            <label for="inputConfirmPassword">Confirm password</label>
+                            <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Your Password" required>
+
+                        </div>
+
+                        <button class="btn btn-lg btn-register btn-block text-uppercase mt-3" type="submit">Register</button>
+                        <a class="d-block text-center mt-2 small link" routerLink='/Registration/Login'>Sign In</a>
+                        <div class="separator my-4">OR</div>
+                        <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign up with Google</button>
+                        <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign up with Facebook</button>
+                    </form>
+                    <a class="d-block text-right mt-5 mr-2 small link" routerLink='/Home'><i class='bx bx-fw bx-home'></i> Back Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

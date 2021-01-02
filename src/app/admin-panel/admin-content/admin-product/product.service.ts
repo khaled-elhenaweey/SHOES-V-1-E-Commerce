@@ -29,6 +29,7 @@ export class ProductService {
     return await this.http.get<Product[]>(this.bestSellerUrl).toPromise();
   }
   async getNewArrival(): Promise<any> {
+    console.log(this.newArrivalUrl);
     return await this.http.get<Product[]>(this.newArrivalUrl).toPromise();
   }
   async getOffers(): Promise<any> {

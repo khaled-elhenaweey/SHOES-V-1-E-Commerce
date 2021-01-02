@@ -282,6 +282,21 @@
     white-space: nowrap;
 }
 
+
+/* Custom Badge */
+
+span.badge {
+    font-size: 12px;
+    line-height: 16px;
+    position: absolute;
+    z-index: 1000;
+    color: $white;
+    padding: 5px 10px;
+    background: $pear;
+    font-weight: 700;
+    border-radius: 100px;
+}
+
 @media (min-width: 1460px) {
     .Title {
         font-size: 3.4em;

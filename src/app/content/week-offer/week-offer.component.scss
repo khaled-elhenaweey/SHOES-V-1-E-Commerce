@@ -57,6 +57,10 @@ p {
     color: $black;
     margin: 35px 0;
     --animation-duration: 5s;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .bg {

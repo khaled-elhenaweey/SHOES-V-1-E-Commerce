@@ -1,0 +1,104 @@
+@import "../../app.component.scss";
+.card-signin {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba($black, 0.1);
+    overflow: hidden;
+}
+
+.card-signin .card-title {
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: $ecru;
+}
+
+.card-signin .card-img-left {
+    width: 45%;
+    background: scroll center url('./../../../assets/img/login2.jpg');
+    background-size: cover;
+}
+
+.card-signin .card-body {
+    padding: 2rem;
+}
+
+.form-signin {
+    width: 100%;
+}
+
+.form-signin .btn {
+    font-size: 80%;
+    letter-spacing: .1rem;
+    font-weight: 400;
+    padding: 1rem;
+}
+
+.form-label-group>label {
+    font-weight: 500;
+    color: $ecru;
+}
+
+.form-label-group input::placeholder {
+    color: $spanish-grey;
+}
+
+input:focus {
+    border-color: $ecru;
+    box-shadow: 0 0 0 0.2rem rgba( $ecru, 0.25);
+}
+
+.btn-register {
+    color: $white;
+    background-color: $ecru;
+    border-color: $ecru;
+}
+
+.btn-register:focus {
+    box-shadow: 0 0 0 0.2rem rgba( $ecru, 0.25);
+}
+
+.link {
+    text-decoration: none;
+    cursor: pointer;
+    color: darken($color: $spanish-grey, $amount: 9);
+}
+
+.btn-google {
+    color: $white;
+    background-color: $middle-blue;
+}
+
+.btn-register:focus {
+    box-shadow: 0 0 0 0.2rem rgba( $middle-blue, 0.25);
+}
+
+.btn-facebook {
+    color: $white;
+    background-color: $ocean-green;
+}
+
+.btn-register:focus {
+    box-shadow: 0 0 0 0.2rem rgba( $ocean-green, 0.25);
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid $spanish-grey;
+}
+
+.separator::before {
+    margin-right: .25em;
+}
+
+.separator::after {
+    margin-left: .25em;
+}

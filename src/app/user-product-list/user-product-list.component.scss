@@ -505,6 +505,21 @@ section.range-slider {
     white-space: nowrap;
 }
 
+
+/* Custom Badge */
+
+span.badge {
+    font-size: 12px;
+    line-height: 16px;
+    position: absolute;
+    z-index: 1000;
+    color: $white;
+    padding: 5px 10px;
+    background: $pear;
+    font-weight: 700;
+    border-radius: 100px;
+}
+
 @media (max-width: 2560px) {
     .el-wrapper {
         width: 295px;

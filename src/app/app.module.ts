@@ -39,6 +39,10 @@ import { UserProductMainComponent } from './user-product/user-product-main/user-
 import { UserProductCommentComponent } from './user-product/user-product-comment/user-product-comment.component';
 import { UserProductCarouselComponent } from './user-product/user-product-carousel/user-product-carousel.component';
 import { UserProductListComponent } from './user-product-list/user-product-list.component';
+import { AdminOfferComponent } from './admin-panel/admin-content/admin-offer/admin-offer.component';
+import { LoginSignupComponent } from './login-signup/login-signup.component';
+import { LoginPageComponent } from './login-signup/login-page/login-page.component';
+import { SignupPageComponent } from './login-signup/signup-page/signup-page.component';
 
 
 @NgModule({
@@ -71,6 +75,10 @@ import { UserProductListComponent } from './user-product-list/user-product-list.
     UserProductCommentComponent,
     UserProductCarouselComponent,
     UserProductListComponent,
+    AdminOfferComponent,
+    LoginSignupComponent,
+    LoginPageComponent,
+    SignupPageComponent,
 
   ],
   imports: [
