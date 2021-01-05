@@ -72,7 +72,8 @@ export class AdminProductComponent implements OnInit, OnDestroy {
   formData = new FormData();
   imageName: string;
   fileType:string;
-
+  offerPrice:number;
+  inOffer:boolean;
   @Output() public onUploadFinished = new EventEmitter();
 
   constructor(private productSerivce: ProductService, private http: HttpClient, private CategoryService: CategoryServiceService,private sanitizer: DomSanitizer) {
@@ -166,7 +167,9 @@ export class AdminProductComponent implements OnInit, OnDestroy {
     let categoryId = Number(this.categoryId);
     let image = this.image;
     let fileType = this.fileType;
-    let newProduct = new Product(productId, productName, productPrice, qty, description, categoryId, image,fileType );
+    let offerPrice=this.offerPrice;
+    let inOffer=this.inOffer;
+    let newProduct = new Product(productId, productName, productPrice, qty, description, categoryId, image,fileType,offerPrice,inOffer );
     newProduct.imgsList = list as number[];
     console.log(newProduct);
     let resualt = await this.productSerivce.saveProduct(newProduct);
@@ -188,6 +191,7 @@ export class AdminProductComponent implements OnInit, OnDestroy {
       );
       console.log(resualt);
     }
+    this.formData.delete("files")
   }
   async getProductbyid(product: Product){
     let resualt = await this.productSerivce.getProductById(product.productId);
@@ -229,7 +233,9 @@ export class AdminProductComponent implements OnInit, OnDestroy {
     let categoryId = Number(this.categoryId);
     let image = this.image;
     let fileType = this.fileType;
-    let editedProduct = new Product(productId, productName, productPrice, qty, description, categoryId,image,fileType);
+    let offerPrice=this.offerPrice;
+    let inOffer=this.inOffer;
+    let editedProduct = new Product(productId, productName, productPrice, qty, description, categoryId,image,fileType,offerPrice,inOffer);
     editedProduct.imgsList = list as number[];
     console.log(editedProduct);
 
@@ -255,6 +261,7 @@ export class AdminProductComponent implements OnInit, OnDestroy {
       );
       console.log(resualt);
     }
+    this.formData.delete("files")
   }
   async deleteProduct(id: Number): Promise<void> {
       Swal.fire({

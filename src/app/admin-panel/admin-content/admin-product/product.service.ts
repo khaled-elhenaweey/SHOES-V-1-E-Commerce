@@ -13,13 +13,16 @@ export class ProductService {
   bestSellerUrl: string;
   newArrivalUrl: string;
   offersUrl: string;
+  delOffersUrl:string;
   constructor(private http: HttpClient) {
     this.baseUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/products';
     this.postProductUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/products/PostProduct';
     this.postImageUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/products/PostImage';
     this.bestSellerUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/Products/bestproducts';
     this.newArrivalUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/Products/newproducts';
-    this.offersUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/products';
+    this.offersUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/Products/CreateOffer';
+    this.delOffersUrl = 'http://ashrafayman85-001-site1.dtempurl.com/api/Products/RemoveOffer';
+
   }
   async getProduct(): Promise<any> {
     return await this.http.get<Product[]>(this.baseUrl).toPromise();
@@ -32,8 +35,11 @@ export class ProductService {
     console.log(this.newArrivalUrl);
     return await this.http.get<Product[]>(this.newArrivalUrl).toPromise();
   }
-  async getOffers(): Promise<any> {
+  async creatOffers(): Promise<any> {
     return await this.http.get<Product>(this.offersUrl).toPromise();
+  }
+  async deleteOffer(id: Number): Promise<any> {
+    return await this.http.delete(this.delOffersUrl + "/" + id).toPromise();
   }
   async getProductById(id: number): Promise<any> {
     return await this.http.get<Product[]>(this.baseUrl + "/" + id).toPromise();

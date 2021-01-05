@@ -60,6 +60,8 @@ export class AdminOfferComponent implements OnInit {
   public message: string;
   public progress: number;
   formData = new FormData();
+  offerPrice:number;
+  inOffer:boolean;
   @Output() public onUploadFinished = new EventEmitter();
 
   constructor(private productSerivce: ProductService, private CategoryService: CategoryServiceService, private http: HttpClient,private sanitizer: DomSanitizer) {
@@ -121,7 +123,9 @@ export class AdminOfferComponent implements OnInit {
     let categoryId = Number(this.categoryId);
     let image = this.image;
     let fileType = this.fileType;
-    let editedProduct = new Product(productId, productName, productPrice, qty, description, categoryId,image,fileType);
+    let offerPrice=this.offerPrice;
+    let inOffer=this.inOffer;
+    let editedProduct = new Product(productId, productName, productPrice, qty, description, categoryId,image,fileType,offerPrice,inOffer);
     editedProduct.imgsList = list as number[];
     console.log(editedProduct);
 

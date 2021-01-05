@@ -12,9 +12,21 @@ export class Product {
   imgsList: number[];
   image:string[];
   fileType :string;
-
+  offerPrice:number;
+  inOffer :boolean;
   // tslint:disable-next-line: max-line-length
-  constructor(public _productId: number, public _productName: string, public _productPrice: number, public _qty: number, public _description: string, public _categoryId: number,public _image: string[],public _fileType:string) {
+  constructor(public _productId: number,
+     public _productName: string,
+     public _productPrice: number,
+     public _qty: number,
+     public _description: string,
+     public _categoryId: number,
+     public _image: string[],
+     public _fileType:string,
+     public _offerPrice:number,
+     public _inOffer:boolean
+     ) 
+     {
     this.productId = _productId;
     this.productName = _productName;
     this.qty = _qty;
@@ -24,6 +36,8 @@ export class Product {
     this.productPrice = _productPrice;
     this.image = _image;
     this.fileType = _fileType;
+    this.offerPrice=_offerPrice;
+    this.inOffer=_inOffer;
   }
 }
 
